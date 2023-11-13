@@ -1,8 +1,8 @@
-import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-// import { FaReact } from "react-icons/fa";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
+import React from "react";
+import { CgWorkAlt } from "react-icons/cg";
+import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
 export const links = [
@@ -46,21 +46,21 @@ export const experiencesData = [
     date: "2018 - 2021",
   },
   {
-    title: "IT Specialist",
+    title: "Business Intelligence Specialist",
     location: "Bucharest, RO",
     description:
-      "I'm now working as a Data Analyst at BDO - Romania to expand my current knowledge about the current tech industry standards for security and data. In this time I have worked on one of my biggest full-stack projects.",
+      "As a BI Specialist, I had the opportunity to engage in a diverse range of projects that showcased my proficiency in both web development and data analysis. One of the highlights of my role was the creation of a promotional website for business intelligence products. This website, developed using React and Vue, was hosted on Azure using a suite of Azure services such as Azure Functions, Azure Web App, and Azure Storage. I played a pivotal role in designing and developing the web application, ensuring a seamless user experience.",
+    icon: React.createElement(FaReact),
+    date: "Sep, 2022 - Sep, 2023",
+  },
+  {
+    title: "Information Technology Auditor",
+    location: "Bucharest, RO",
+    description:
+      "As an IT Auditor, my primary responsibility is to assess and evaluate the IT infrastructure and security systems of our clients' organizations. I work diligently to ensure that their internal applications and overall IT environment adhere to the standards and best practices in the realm of IT security. Through a combination of comprehensive audits, risk assessments, and compliance checks, I aim to identify vulnerabilities, weaknesses, and areas for improvement. By providing detailed insights and recommendations, I help our clients fortify their IT defenses, mitigate risks, and maintain the integrity and confidentiality of their data, thereby contributing to the overall security and efficiency of their operations. My role is pivotal in safeguarding critical information assets and promoting a culture of secure and robust IT practices.",
     icon: React.createElement(CgWorkAlt),
     date: "2022 - present",
   },
-  // {
-  //   title: "Full-Stack Developer",
-  //   location: "Houston, TX",
-  //   description:
-  //     "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-  //   icon: React.createElement(FaReact),
-  //   date: "2021 - present",
-  // },
 ] as const;
 
 export const projectsData = [
