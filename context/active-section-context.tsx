@@ -3,7 +3,9 @@
 import type { SectionName } from "@/lib/types";
 import React, { useState, createContext, useContext } from "react";
 
-type ActiveSectionContextProviderProps = { children: React.ReactNode };
+type ActiveSectionContextProviderProps = {
+  children: React.ReactNode;
+};
 
 type ActiveSectionContextType = {
   activeSection: SectionName;
@@ -40,7 +42,7 @@ export function useActiveSectionContext() {
 
   if (context === null) {
     throw new Error(
-      "useActiveSectionContext must be used within an ActiveSectionContextProvider",
+      "useActiveSectionContext must be used within an ActiveSectionContextProvider"
     );
   }
 

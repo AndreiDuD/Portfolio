@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://portfolio-andrei.vercel.app/
+Host: https://andrei-dev-portfolio.vercel.app/

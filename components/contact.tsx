@@ -1,12 +1,8 @@
 "use client";
 
-import React from "react";
-import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { sendEmail } from "@/actions/sendEmail";
-import SubmitBtn from "./submit-btn";
-import toast from "react-hot-toast";
+import { motion } from "framer-motion";
+import SectionHeading from "./section-heading";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -15,7 +11,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 w-[min(100%,38rem)] text-center sm:mb-28"
+      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
       initial={{
         opacity: 0,
       }}
@@ -31,16 +27,14 @@ export default function Contact() {
     >
       <SectionHeading>Contact me</SectionHeading>
 
-      <p className="-mt-6 text-gray-700 dark:text-white/80">
+      <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
         <a className="underline" href="mailto:andrei.dev.email@gmail.com">
-          andrei.dev.email@gmail.com
+        andrei.dev.email@gmail.com.
         </a>{" "}
-        or through this form.
       </p>
 
-      <form
-        id="contactForm"
+      {/* <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
@@ -54,7 +48,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="borderBlack h-14 rounded-lg px-4 text-white transition-all dark:bg-white dark:bg-opacity-80 dark:text-black dark:outline-none dark:focus:bg-opacity-100"
+          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="senderEmail"
           type="email"
           required
@@ -62,14 +56,14 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="borderBlack my-3 h-52 rounded-lg p-4 text-white transition-all dark:bg-white dark:bg-opacity-80 dark:text-black dark:outline-none dark:focus:bg-opacity-100"
+          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="message"
           placeholder="Your message"
           required
           maxLength={5000}
         />
         <SubmitBtn />
-      </form>
+      </form> */}
     </motion.section>
   );
 }

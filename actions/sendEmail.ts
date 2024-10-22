@@ -1,9 +1,9 @@
 "use server";
 
+import ContactFormEmail from "@/email/contact-form-email";
+import { getErrorMessage, validateString } from "@/lib/utils";
 import React from "react";
 import { Resend } from "resend";
-import { validateString, getErrorMessage } from "@/lib/utils";
-import ContactFormEmail from "@/email/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -26,10 +26,9 @@ export const sendEmail = async (formData: FormData) => {
   let data;
   try {
     data = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>", //Must switch this for production
-      //TODO purchase domain on vercel configure with resend
+      from: "Contact Form <onboarding@resend.dev>",
       to: "andrei.dev.email@gmail.com",
-      subject: "Message from portfolio contact form",
+      subject: "Message from contact form",
       reply_to: senderEmail,
       react: React.createElement(ContactFormEmail, {
         message: message,

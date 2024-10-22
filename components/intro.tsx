@@ -1,6 +1,6 @@
 "use client";
 
-import profile from "@/app/profile.jpeg";
+import profile from "@/app/profile.webp";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
 import { motion, useAnimation } from "framer-motion";
@@ -103,11 +103,11 @@ export default function Intro() {
         variants={itemVariants}
       >
         <span className="font-bold">Hello, I'm Andrei.</span> I'm working
-        towards becoming a{" "}
-        <span className="font-bold">full-stack developer </span>currently
-        expanding my knowledge in building{" "}
-        <span className="italic">sites & apps</span> focusing on{" "}
-        <span className="underline">React(Next.js)</span>.
+        towards expanding my{" "}
+        <span className="font-bold">developer knowledge </span>currently
+        I'm a full time IS Auditor with a passion for building{" "}
+        <span className="italic">sites & apps</span> using{" "}
+        <span className="underline">Next.js</span>.
       </motion.h1>
 
       <motion.div
